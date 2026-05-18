@@ -43,9 +43,9 @@
                     MouseLeftButtonUp="osztalyMenu_MouseLeftButtonUp"
                     Style="{StaticResource ResourceKey=ListItemStyle}" />
                 <ListViewItem
-                    x:Name="teremekMenu"
+                    x:Name="termekMenu"
                     Content="Termek"
-                    MouseLeftButtonUp="teremekMenu_MouseLeftButtonUp"
+                    MouseLeftButtonUp="termekMenu_MouseLeftButtonUp"
                     Style="{StaticResource ResourceKey=ListItemStyle}" />
                 <ListViewItem
                     x:Name="felhasznalokMenu"

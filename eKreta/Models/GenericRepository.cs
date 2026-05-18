@@ -17,15 +17,32 @@ namespace eKreta.Models
 		// Ez a metódus visszaadja az összes elemet a táblából. Jelenleg csak egy üres listát ad vissza, de később itt lesz a logika az adatbázisból való lekérdezéshez.
 		public List<T> GetAll()
 		{
-
-
-
-			return null;
+			using (SQLite.SQLiteConnection connection = new SQLite.SQLiteConnection(_databasePath))
+			{
+				connection.CreateTable<T>();
+				return connection.Table<T>().ToList();
+			}
 		}
-		public void Insert(T item){}
-		public void Update(T item){}
-		public void Delete(T item){}
-
-
+		public void Insert(T item){
+			using (SQLite.SQLiteConnection connection = new SQLite.SQLiteConnection(_databasePath))
+			{
+				connection.CreateTable<T>();
+				connection.Insert(item);
+			}
+		}
+		public void Update(T item){
+			using (SQLite.SQLiteConnection connection = new SQLite.SQLiteConnection(_databasePath))
+			{
+				connection.CreateTable<T>();
+				connection.Update(item);
+			}
+		}
+		public void Delete(T item){
+			using (SQLite.SQLiteConnection connection = new SQLite.SQLiteConnection(_databasePath))
+			{
+				connection.CreateTable<T>();
+				connection.Delete(item);
+			}
+		}
 	}
 }
