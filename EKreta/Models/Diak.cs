@@ -5,30 +5,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EKreta.Models
+namespace eKreta.Models
 {
-	public class Diak
-	{
-		public Diak()
-		{
-		}
+    public  class Diak
+    {
+        public Diak()
+        {
+        }
 
-		[PrimaryKey, AutoIncrement]
-		public int id { get; set; }
-		public string VezNev{ get; set; }
-		public string UtoNev { get; set; }
-		public string Szuldatum { get; set; }
-		public string Anyjaneve { get; set; }
-		public string Lakcim { get; set; }
+        [PrimaryKey, AutoIncrement]
+        public int Id { get; set; }
+        public string VezNev { get; set; }
+        public string UtoNev { get; set; }
+        public string SzulDatum { get; set; }
+        public string AnyjaNeve { get; set; }
+        public string Lakcim {  get; set; }
 
-
-		public Diak(string vezNev, string utoNev, string szuldatum, string anyjaneve, string lakcim)
-		{
-			VezNev = vezNev;
-			UtoNev = utoNev;
-			Szuldatum = szuldatum;
-			Anyjaneve = anyjaneve;
-			Lakcim = lakcim;
-		}
-	}
+        public Diak(string vezNev, string utoNev, string szulDatum, string anyjaNeve, string lakcim)
+        {
+            VezNev = vezNev;
+            UtoNev = utoNev;
+            SzulDatum = szulDatum;
+            AnyjaNeve = anyjaNeve;
+            Lakcim = lakcim;
+        }
+    }
 }

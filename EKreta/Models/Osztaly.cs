@@ -5,23 +5,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EKreta.Models
+namespace eKreta.Models
 {
-	public class Osztaly
-	{
-		public Osztaly() 
-		{ 
-		}
+    public class Osztaly
+    {
+        public Osztaly()
+        {
+        }
 
-		[PrimaryKey, AutoIncrement]
-		public int Id { get; set; }
-		public string OsztalyNev { get; set; }
-		public int TeremId { get; set; }
+        [PrimaryKey, AutoIncrement]
+        public int Id { get; set; }
+        public string OsztalyNev { get; set; }
+        public int TeremId { get; set; }
 
-		public Osztaly(string osztalyNev, int teremId)
-		{
-			OsztalyNev = osztalyNev;
-			TeremId = teremId;
-		}
-	}
+        public Osztaly(string osztalyNev, int teremId)
+        {
+            OsztalyNev = osztalyNev;
+            TeremId = teremId;
+        }
+    }
 }

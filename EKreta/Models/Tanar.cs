@@ -5,27 +5,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EKreta.Models
+namespace eKreta.Models
 {
-	public class Tanar
-	{
-		public Tanar() 
-		{ 
-		}
+    public class Tanar
+    {
+        public Tanar()
+        {
+        }
 
-		[PrimaryKey, AutoIncrement]
-		public int id { get; set; }
-		public string VezNev { get; set; }
-		public string UtoNev { get; set; }
-		public int OsztalyId { get; set; }
-		public bool KedvesE { get; set; }
+        [PrimaryKey, AutoIncrement]
+        public int Id { get; set; }
+        public string VezNev { get; set; }
+        public string UtoNev { get; set; }
+        public int OsztalyId { get; set;}
+        public bool KedvesE {  get; set; }
 
-		public Tanar(string vezNev, string utoNev, int osztalyId, bool kedvesE)
-		{
-			VezNev = vezNev;
-			UtoNev = utoNev;
-			OsztalyId = osztalyId;
-			KedvesE = kedvesE;
-		}
-	}
+        public Tanar(string vezNev, string utoNev, int osztalyId, bool kedvesE)
+        {
+            VezNev = vezNev;
+            UtoNev = utoNev;
+            OsztalyId = osztalyId;
+            KedvesE = kedvesE;
+        }
+    }
 }

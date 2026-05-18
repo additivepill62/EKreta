@@ -2,7 +2,7 @@
 using System.Data;
 using System.Windows;
 
-namespace EKreta
+namespace eKreta
 {
     /// <summary>
     /// Interaction logic for App.xaml
@@ -10,15 +10,8 @@ namespace EKreta
     public partial class App : Application
     {
 
-
-
         static string database = "eKreta.db";
         static string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
         public static string databasePath = System.IO.Path.Combine(path, database);
-
-
-
-
-	}
-
+    }
 }

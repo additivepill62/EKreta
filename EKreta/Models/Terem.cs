@@ -5,21 +5,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EKreta.Models
+namespace eKreta.Models
 {
-	public class Terem
-	{
-		public Terem() 
-		{
-		}
+    public class Terem
+    {
+        public Terem()
+        {
+        }
 
-		[PrimaryKey, AutoIncrement]
-		public int Id { get; set; }
-		public string TeremNev { get; set; }
-		public Terem(string teremNev)
-		{
+        [PrimaryKey, AutoIncrement]
+        public int Id { get; set; }
+        public string TeremNev { get; set; }
 
-			TeremNev = teremNev;
-		}
-	}
+        public Terem(string teremNev)
+        {
+            TeremNev = teremNev;
+        }
+    }
 }
