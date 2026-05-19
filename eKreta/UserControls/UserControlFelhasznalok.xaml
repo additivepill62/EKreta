@@ -8,36 +8,67 @@
     <StackPanel>
         <DataGrid
             x:Name="datagridFelhasznalok"
-            Width="1100" 
-            Height="600" 
+            Width="1100"
+            Height="600"
             AutoGenerateColumns="False"
             CanUserAddRows="False"
             CanUserDeleteRows="False"
             IsReadOnly="True"
-            SelectionChanged="datagridFelhasznalok_SelectionChanged"
-            >
+            SelectionChanged="datagridFelhasznalok_SelectionChanged">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="ID" Binding="{Binding Id}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Felhasználó név:" Binding="{Binding FelhasznaloNev}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Teljes Név:" Binding="{Binding TeljesNev}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Szerepkör id:" Binding="{Binding Szerepkor}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Szerepkör név:" Binding="{Binding SzerepkorNev}"></DataGridTextColumn>
-                
-                
+                <DataGridTextColumn Binding="{Binding Id}" Header="ID" />
+                <DataGridTextColumn Binding="{Binding FelhasznaloNev}" Header="Felhasználó név:" />
+                <DataGridTextColumn Binding="{Binding TeljesNev}" Header="Teljes Név:" />
+                <DataGridTextColumn Binding="{Binding Szerepkor}" Header="Szerepkör id:" />
+                <DataGridTextColumn Binding="{Binding SzerepkorNev}" Header="Szerepkör név:" />
+
+
             </DataGrid.Columns>
-            
-            
-            
+
+
+
         </DataGrid>
-        <WrapPanel>
-            <StackPanel>
-                
-                
+        <WrapPanel Margin="130,10,130,0">
+            <StackPanel Width="300" Background="LightGray">
+                <TextBlock>Felhasználónév:</TextBlock>
+                <TextBox x:Name="felhasznalonevTBOX" />
+                <TextBlock>Teljes név:</TextBlock>
+                <TextBox x:Name="teljesnevTBOX" />
+                <TextBlock>Jelszó</TextBlock>
+                <PasswordBox x:Name="jelszoTBOX" />
+                <TextBlock>Szerepkör</TextBlock>
+                <ComboBox x:Name="szerepkorCBOX" />
             </StackPanel>
-            
-            
-            
-            <StackPanel></StackPanel>
+
+
+
+            <StackPanel>
+                <Button
+                    x:Name="mentesBTN"
+                    Width="200"
+                    Background="Green"
+                    Click="mentesBTN_Click"
+                    Content="Mentés"
+                    Foreground="White"
+                    Visibility="Visible" />
+                <Button
+                    x:Name="torlesBTN"
+                    Width="200"
+                    Background="Red"
+                    Click="torlesBTN_Click"
+                    Content="Törlés"
+                    Foreground="White"
+                    Visibility="Hidden" />
+                <Button
+                    x:Name="modBTN"
+                    Width="200"
+                    Background="Yellow"
+                    Click="modBTN_Click"
+                    Content="Módosítás"
+                    Foreground="White"
+                    Visibility="Hidden" />
+
+            </StackPanel>
         </WrapPanel>
     </StackPanel>
 </UserControl>
